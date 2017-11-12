@@ -3,8 +3,8 @@ package Logger;
 public class SimpleLayout implements Layout {
 
 	@Override
-	public String getLayout(String... params) {		
-		return String.format("", params[0], params[1]);
+	public String getLayout(String date, String level, String message) {		
+		return String.format("%s - %s - %s", date, level, message);
 	}
 	
 	
